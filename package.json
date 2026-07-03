@@ -1,0 +1,16 @@
+{
+  "name": "sudoku-solver",
+  "version": "1.0.0",
+  "description": "Full-stack Sudoku Solver with C++ engine",
+  "scripts": {
+    "build-engine": "cd engine && g++ -std=c++11 -O3 solver.cpp -o engine.exe",
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "server": "npm run build-engine && cd server && node server.js",
+    "client": "cd client && npm run dev",
+    "dev": "npm run build-engine && concurrently \"cd server && node server.js\" \"npm run client\"",
+    "start": "npm run build-engine && concurrently \"cd server && node server.js\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
