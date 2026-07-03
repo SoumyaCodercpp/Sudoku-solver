@@ -42,6 +42,7 @@ npm run build-engine
 # Start everything (server + client)
 npm run dev
 
+```
 
 ## 🔌 API Endpoints
 
